@@ -1,0 +1,75 @@
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Default gap for larger screens */
+
+  gap: 100px; /* Adjusted gap for larger screens */
+}
+
+ul li {
+  list-style: none;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+ul:hover li a {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+ul li a:hover {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: #010101;
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eb09e0da;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+ul li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  ul {
+    gap: 10px; /* Adjusted gap for smaller screens */
+  }
+
+  ul li {
+    margin: 0;
+  }
+
+  ul li a {
+    font-size: 14px;
+  }
+}

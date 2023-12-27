@@ -1,0 +1,35 @@
+
+        /* Image hover animations for the last three rows */
+        .img-fluid-two {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-fluid-two:hover {
+            transform: rotate(15deg);
+        }
+
+        .img-fluid-three-a {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-fluid-three-a:hover {
+            transform: translateY(-20px);
+        }
+
+        .img-fluid-three-b {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-fluid-three-b:hover {
+            transform: scale(1.2);
+        }
+
+        .img-fluid {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-fluid:hover {
+            transform: rotate(360deg);
+        }
+        
+ 

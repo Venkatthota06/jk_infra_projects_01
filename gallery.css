@@ -1,0 +1,297 @@
+
+  body {
+    font-family: 'Roboto Condensed', sans-serif;
+    /* overflow-x: hidden; */
+
+  }
+
+
+
+  h1 {
+    margin: 150px auto 30px auto;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hi-slide {
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 115px auto 0;
+  }
+
+  .hi-slide .hi-next,
+  .hi-slide .hi-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    transition: all 0.6s;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .hi-slide .hi-next:hover,
+  .hi-slide .hi-prev:hover {
+    opacity: 1;
+    background-color: #fff;
+  }
+
+  .hi-slide .hi-prev {
+    left: -60px;
+  }
+
+  .hi-slide .hi-prev::before {
+    content: '<';
+  }
+
+  .hi-slide .hi-next {
+    right: -60px;
+  }
+
+  .hi-slide .hi-next::before {
+    content: '>';
+  }
+
+  .hi-slide>ul {
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .hi-slide>ul>li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 146px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid #fff;
+    background-color: #333;
+    cursor: pointer;
+  }
+
+  .hi-slide>ul>li>img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+  }
+
+  .circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .circle:hover img {
+    opacity: 0.5;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .circle:hover .overlay {
+    opacity: 1;
+
+  }
+
+
+  .animated-images img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .animated-images img:hover {
+    transform: scale(1.1);
+  }
+
+  .bgsocial {
+    border-radius: 50%;
+    border: 1px solid grey;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .bgsocial:hover {
+    background-color: #333;
+  }
+
+  .bgsocial:hover span {
+    color: rgb(226, 11, 176);
+  }
+
+  .container02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+  }
+
+  /* First row styles with animation */
+  .first-row img {
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  /* Remaining two rows styles with animation */
+  .other-rows img {
+    width: 30%;
+    margin: 5px;
+    animation: scaleIn 1s ease-in-out;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+  .containerlast {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 20px;
+    }
+
+    /* Row styles */
+    .rowlast {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 10px 0;
+      height: 100%;
+    }
+
+    /* Image styles */
+    .rowlast img {
+      width: 30%;
+    }
+    @media (max-width: 768px) {
+      /* Styles for screens smaller than 768px wide */
+      body{
+        overflow-x: hidden;
+      }
+
+      .hi-slide {
+        width: 100%;
+      }
+
+      .hi-slide .hi-next,
+      .hi-slide .hi-prev {
+        font-size: 16px;
+      }
+
+      .hi-slide>ul,
+      .hi-slide>ul>li {
+        width: 100%;
+        height: auto;
+      }
+
+      .hi-slide>ul>li {
+        left: 0;
+        top: 0;
+      }
+
+      .container02 .row video {
+        width: 100%;
+        height: auto;
+      }
+
+      .first-row img {
+        width: 100%;
+      }
+
+      .other-rows img {
+        width: 100%;
+        margin: 5px 0;
+      }
+
+      .rowlast img {
+        width: 30%;
+        height: 30vh;
+      }
+
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Adjust as needed */
+      }
+
+      .overlay {
+        font-size: 16px;
+      }
+
+      /* Add more adjustments as needed */
+    }
+    
+      
+      /* Media query for smaller screens */
+      @media (max-width: 768px) {
+        ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+      
+        ul li {
+          margin: 0;
+        }
+      
+        ul li a {
+          font-size: 14px;
+        }
+    }
+
